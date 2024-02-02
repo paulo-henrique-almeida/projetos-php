@@ -1,0 +1,262 @@
+/* fontes baixadas externamente */
+@font-face {
+    font-family: 'ordem';
+    src: url(Fontes/adobehebrew-regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'caos';
+    src: url(Fontes/TANKTYPE.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'sentimento';
+    src: url(Fontes/Hiruzen\ Exist.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'saber';
+    src: url(Fontes/Fedattona.otf) format('opentype');
+}
+
+/* animação que cresce */
+@keyframes cresce {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* animação que troca de cor */
+@keyframes caos {
+    0% {
+        color: #A347FF;
+        text-shadow: 0px 0px 7px #7000AC;   
+    }
+    33% {
+        color: #05C7F2;
+        text-shadow: 0px 0px 7px #0492B3;    
+    }
+    66% {
+        color: #63E637;
+        text-shadow: 0px 0px 7px #63E637;
+    }
+    100% {
+        color: #F52FEB;
+        text-shadow: 0px 0px 7px #C225BA;
+    }
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #A347FF;
+    text-shadow: 0px 0px 7px #7000AC;
+}
+
+h1 {
+    font-family: 'ordem', Roboto, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    text-shadow: 0px 0px 4px #bbb;
+}
+
+p {
+    margin-top: 2vh;
+    font-weight: bold;   
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+hr {
+    width: 99vw;
+    border-color: #A347FF;
+    box-shadow: 0px 0px 15px #7000AC;
+} 
+
+form {
+    margin-top: 5vh;
+    padding: 5vh 10vw 5vh 10vw;
+    border: 3px solid #A347FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px #7000AC;
+    border-radius: 15px;
+    animation: cresce .5s;
+}
+
+.form {
+    margin-top: 5vh;
+    padding: 5vh 10vw 5vh 10vw;
+    width: 30vw;
+    border: 3px solid #A347FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px #7000AC;
+    border-radius: 15px;
+    animation: cresce .5s;
+}
+
+/* estilização do botaão */
+#btn {
+    background-color: #A347FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    height: 3rem;
+    transition: all .5s ease;
+    margin-top: 5vh;
+    box-shadow: 0px 0px 15px #7000AC;
+}
+
+.link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    padding: 1vh;
+}
+
+/* animação do botão */
+#btn:hover {
+    transform: scale(1.1);
+}
+
+#btn:active {
+    transform: translate(.9);
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.alternativas {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+label input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all ease .5s;
+}
+
+label:hover input ~ .checkmark {
+  box-shadow: 0px 0px 15px #7000AC;
+}
+
+label input:checked ~ .checkmark {
+  background-color: #A347FF;
+  box-shadow: 0px 0px 15px #7000AC;
+}
+
+.central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilos de resultados */
+.medo { 
+    color: white;
+    text-shadow: 0px 0px 20px #72A9F2;
+    font-family: 'ordem', Roboto, sans-serif;
+}
+
+.energia {
+    color: #A347FF;
+    text-shadow: 0px 0px 7px #7000AC; 
+    font-family: 'caos', Roboto, sans-serif;
+    animation: caos 2s ease infinite forwards;
+    text-transform: uppercase;
+}
+
+.sangue {
+    color: #D91A2A;
+    text-shadow: 0px 0px 7px #99121E;
+    font-family: 'sentimento', Roboto, sans-serif;
+}
+
+.conhecimento {
+    color: #FAF33F;
+    text-shadow: 0px 0px 7px #C7C232;
+    font-family: 'saber', Roboto, sans-serif;
+}
+
+.certa {
+    color: #3d8b40;
+    text-shadow: 0px 0px 5px #327335;
+}
+
+.errada {
+    color: #d9534f;
+    text-shadow: 0px 0px 5px #993A37;
+}
+
+/* estilização da barra de rolagem */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #121212;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 5px;
+}
