@@ -1,0 +1,68 @@
+:root {
+    --cor-principal: #673ab7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--cor-principal);
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vh;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .323);
+    padding: 15vh 15vw;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+input, select {
+    text-align: center;
+    font-size: 1em;
+    width: 80%;
+    background-color: #cccccc;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid var(--cor-principal);
+    outline: none;
+}
+
+.btn {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 10px 15px;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(.9);
+}

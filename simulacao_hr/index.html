@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de hr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form action="simulacao_hr" method="post">
+        <p>Qual será o símbolo?</p>
+        <input type="text" name="simbolo" required>
+
+        <p>Qual será a direção?</p>
+        <select name="direcao">
+            <option value="left">Esquerda</option>
+            <option value="right">Direita</option>
+            <option value="down">Baixo</option>
+            <option value="up">Cima</option>
+        </select>
+
+        <p>Qual será o tamanho da linha?</p>
+        <input type="number" name="tamanho" min="1" required>
+
+        <input type="submit" class="btn">
+    </form>
+
+</body>
+</html>
