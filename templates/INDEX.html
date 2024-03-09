@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <form action="assets/paginas/usuario.php" method="post" class="container">
+        <p>Nome do Usuário</p>
+        <input type="text" name="nome">
+
+        <p>Título</p>
+        <input type="text" name="titulo" required>
+
+        <p>Conteúdo da Página</p>
+        <textarea name="conteudo" cols=5 rows=3>
+        </textarea>
+
+        <p>Cor de fundo</p>
+        <select name="cor-fundo" id="cor-fundo" required>
+            <option value="#101010">Preto</option>
+            <option value="white">Branco</option>
+            <option value="#673ab7">Roxo</option>
+            <option value="#2140de" selected>Azul</option>
+            <option value="darkcyan">Ciano</option>
+        </select>
+
+        <p>Cor do texto</p>
+        <select name="cor-texto" id="cor-texto" required>
+            <option value="#101010">Preto</option>
+            <option value="white" selected>Branco</option>
+            <option value="#673ab7">Roxo</option>
+            <option value="#2140de">Azul</option>
+            <option value="darkcyan">Ciano</option>
+        </select>
+
+        <p>Imagem</p>
+        <select name="arena">
+            <option value="">Sem imagem</option>
+            <option value="maraca">Maracanã</option>
+            <option value="beirario">Beira Rio</option>
+            <option value="fontenova">Fonte Nova</option>
+        </select>
+
+        <input type="submit" class="btn">
+    </form>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
